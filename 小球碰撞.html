@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            /*div{
+                text-align: center;
+                padding-top:100px;
+                font-size: 0;
+            }*/
+            div>span{
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background: radial-gradient(#0f4d92,#ffffff);
+                position: absolute;
+            }
+            /*div>span:before{
+                content: "";
+                width: 1px;
+                height: 100px;
+                background: #3c3c3c;
+                position: absolute;
+                top: -100px;
+            }*/
+
+            @keyframes moveball_1 {
+                0%{
+                    /*left: 0;*/
+                    /*transform-origin: -50px -100px;*/
+
+                }
+                25%{
+                    transform-origin:left top;
+                    transform: rotateZ(20deg);
+                }
+                50%{
+                    /*left: -250px;*/
+                    transform-origin:left top;
+                    transform: rotateZ(30deg);
+                }
+                100%{
+                    /*left: 0;*/
+                    /*transform-origin: -50px -100px;*/
+
+                }
+            }
+            @keyframes moveball_2 {
+                0%{
+                    right: 0;
+                }
+                50%{
+                    right: -250px;
+                }
+                100%{
+                    right: 0;
+                }
+            }
+
+
+
+            .ball_1{
+
+                left: -50px;
+                top: 100px;
+            }
+            .ball_2{
+                animation: moveball_2 1s linear infinite;
+            }
+
+            .box1,.box2{
+                width: 200px;
+                height: 200px;
+
+            }
+            .box1{
+                /*border: 1px solid #cccccc;*/
+                position: relative;
+                top:20px;
+                left:300px;
+                animation:  moveball_1 1s linear infinite;
+                transition: all 1s linear ;
+            }
+            .box2{
+                border: 1px solid #ff0e3f;
+                position: relative;
+                top: 0;
+                right:-300px;
+            }
+
+            .line1{
+                width: 1px;
+                height: 100px;
+                background: #3c3c3c;
+                display: inline-block;
+                left: 0px;
+                top: 0;
+            }
+
+        </style>
+        <div class="box1">
+            <span class="line1"></span>
+            <span id="ball_1" class="ball_1"></span>
+        </div>
+        <!--<div class="box2">
+            <span class="line2"></span>
+            <span id="ball_2" class="ball_2"></span>
+        </div>-->
+        <script>
+            /*var ball_1 = document.getElementById("ball_1");
+            var ball_2 = document.getElementById("ball_2");
+
+            ball_1.addEventListener("animationend",function () {
+                ball_2.className = "ball_2";
+            });
+            ball_2.addEventListener("animationend",function () {
+                ball_1.className = "ball_1";
+            });
+            ball_1.addEventListener("animationstart",function () {
+                ball_2.className = "";
+            });
+            ball_2.addEventListener("animationstart",function () {
+                ball_1.className = "";
+            });
+
+            ball_1.className = "ball_1";*/
+        </script>
+    </body>
+</html>
